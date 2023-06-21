@@ -1,0 +1,36 @@
+@import "../../App.scss";
+
+*{
+    color: #000;
+    text-align: center;
+}
+
+.Background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: {
+        image: url(../../assets/img/desktop-bg.png);
+        repeat: no-repeat;
+        size: cover;
+        position: 100%;
+    };
+}
+.date-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10rem;
+
+    .time {
+        text-transform: uppercase;
+        font: {
+            family: logo-font;
+            size: 12vw;
+        }
+        line-height: 0.8;
+    }
+    .date {
+        font-size: 2vw;
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../App.scss';
+
+.Card {
+    background-color: #ddd;
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50vw;
+    height: 70vh;
+    box-shadow: $box-shw;
+    .card-header {
+        @include radial-gradient();
+        width: 100%;
+        max-height: 100px;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        padding: 5px 10px;
+        font: {
+            weight: 600;
+            size: 1.5vw;
+        }
+        .right span{
+            padding-left: 10px;
+        }
+        .right span:hover {
+            filter: invert(0.3);
+        }
+    }
+}
+    .card-content {
+        padding: 10px;
+        text-align: left;
+        height: 1000px;
+        overflow: visible;
+        .app-logo {
+            //width: 10vw;
+            height: 10vh;
+            display: block;
+            margin: 15px auto;
+        }
+    }

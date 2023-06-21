@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+header {
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: block;
+
+    ul {
+        display: inline;
+        li {
+            display: inline;
+            float: right;
+            margin: 5px auto;
+            cursor: pointer;
+            color: #fff!important;
+            padding: 0 10px;
+            .fill {
+                @include icons-box(2,2,1.5vw);
+                filter: invert(100);
+            }
+        }
+    }
+}
+/*.fill {
+    @include icons-box(2,2,1.5vw);
+    filter: invert(100);
+}*/

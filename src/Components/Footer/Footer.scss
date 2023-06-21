@@ -1,0 +1,10 @@
+@import "../../App.scss";
+
+.app-wrapper {
+    @include icon-wrapper;
+    position: fixed;
+    bottom: 0;
+}
+.apps-btn {
+    @include icons-box(7vh, 4vw, 2.5vw)
+}

@@ -1,0 +1,63 @@
+@import "../../App.scss";
+
+.Menu {
+    position: absolute;
+    bottom: 8vh;
+    left: 25vw;
+    right: 25vw;
+    margin: 5px auto;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    z-index: 1;
+    box-shadow: $box-shw;
+    overflow: hidden;
+    padding: 10px;
+}
+    .Menu img{
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        filter: blur(25px);
+        position: absolute;
+       // filter: -webkit-blur(30px);
+    }
+input.menu-search {
+    width: 100%;
+    position: sticky;
+    border-radius: 5px;
+    background-color: #ffffffaf;
+    font-size: 1vw;
+    padding: 10px;
+    border: none;
+    z-index: 1;
+    margin-top: 15px;
+    text-align: left;
+    font-family: logo-font;
+}
+.apps-grid {
+    @include icon-wrapper;
+    flex-flow: wrap;
+    row-gap: 20px;
+    position: absolute;
+    z-index: 1;
+}
+.Menu::before{
+    content: "All apps";
+    width: 90%;
+    color: #fff;
+    z-index: 1;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 2px solid #fff;
+}
+.apps-icon {
+    @include icons-box(10vh, 6vw, 3vw);
+    text-overflow: ellipsis;
+    span {
+        display: block;
+        font-size: 1.2vw;
+    }
+}

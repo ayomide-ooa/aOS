@@ -1,0 +1,82 @@
+@font-face {
+  font-family: logo-font;
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+$box-shw: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.2);
+
+@mixin icon-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+@mixin icons-box($iconHgt, $iconWth, $font-size) {
+  border: none;
+  border-radius: 10px;
+  height: $iconHgt;
+  width: $iconWth;
+  font-size: $font-size;
+  margin: 2px 5px;
+  background-color: transparent;
+}
+@mixin white-icon() {
+  filter: invert(100);
+}
+@mixin radial-gradient() {
+    background: #888;
+    background: radial-gradient(#888, #bbb);
+    background: -webkit-radial-gradient(#888, #bbb);
+    background: -moz-radial-gradient(#888, #bbb);
+    background: -o-radial-gradient(#888, #bbb);
+}
+
+* {
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-button {
+  background-color: green;
+  border: 20px;
+}
+*::selection {
+  background-color: rgb(0,85,0)!important;
+  color: #fff;
+}
+input:focus-within {
+  outline: none;
+
+}
+/*main {
+  height: 100%;
+  width: 100;
+  background: {
+    image: url("./assets/img/services-bg.jpg");
+    repeat: no-repeat;
+    size: cover;
+    }
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    //text-align: center;
+}
+.Just-border {
+  width: 100%;
+  background-color: $bg_color;
+}
+section {
+  height: 100vh;
+  padding: 20px;
+  transition: linear(0.075, 0.82, 0.165, 1);
+
+}
+*/
