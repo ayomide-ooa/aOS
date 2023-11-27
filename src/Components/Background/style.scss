@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+*{
+    color: #000;
+    text-align: center;
+}
+
+.Background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    overflow: -moz-hidden-unscrollable;
+    background: {
+        image: url(../../assets/img/default-bg-light.jpg);
+        repeat: no-repeat;
+        size: cover;
+        position: 100%;
+    };
+}
+.date-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10rem;
+}
+    .time {
+        text-transform: uppercase;
+        font: {
+            family: logo-font;
+            size: 5rem;
+        }
+        line-height: 0.8;
+    }
+    .date {
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: row!important;
+        column-gap: 20px;
+    }

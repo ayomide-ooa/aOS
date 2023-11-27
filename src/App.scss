@@ -1,9 +1,24 @@
+@import "./Functions/animation.scss";
+
 @font-face {
   font-family: logo-font;
   src: url(./assets/fonts/Montserrat-SemiBold.ttf);
 }
+@font-face {
+  font-family: mont-med;
+  src: url(./assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: mont-reg;
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: mont-black;
+  src: url(./assets/fonts/Montserrat-Black.ttf);
+}
 
 $box-shw: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.2);
+$bg-white: rgba(255,255,255,.7);
 
 @mixin icon-wrapper {
     display: flex;
@@ -13,14 +28,19 @@ $box-shw: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.2);
     width: 100%;
     justify-content: center;
     vertical-align: middle;
-    padding: 10px;
+    padding: 5px;
 }
-@mixin icons-box($iconHgt, $iconWth, $font-size) {
+@mixin bg-hover {
+  background-color: rgba(0,0,0,.2)!important;
+  border-radius: 5px!important;
+}
+@mixin icons-box($width, $height) {
   border: none;
   border-radius: 10px;
-  height: $iconHgt;
-  width: $iconWth;
-  font-size: $font-size;
+  height: $height;
+  width: $width;
+  width: -moz-fit-content;
+  height: -moz-fit-content;
   margin: 2px 5px;
   background-color: transparent;
 }
@@ -34,49 +54,86 @@ $box-shw: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.2);
     background: -moz-radial-gradient(#888, #bbb);
     background: -o-radial-gradient(#888, #bbb);
 }
+@mixin search-style($width, $brd-rd, $bg, $f-size, $pd) {
+  width: $width;
+  position: sticky;
+  border-radius: $brd-rd;
+  background-color: $bg;
+  font-size: $f-size;
+  padding: $pd;
+  border: none;
+  z-index: 1;
+  text-align: left;
+  font-family: logo-font;
+}
 
 * {
   box-sizing: border-box;
+  overflow: hidden;
 }
 *::-webkit-scrollbar {
-  width: 10px;
-  padding: 10px;
-  background-color: transparent;
+  width: 5px;
+  background-color: rgba(127, 171, 200, 0.5);
 }
 *::-webkit-scrollbar-button {
-  background-color: green;
-  border: 20px;
+  background-color: rgba(46, 79, 182, 0.3);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(46, 79, 182, 0.3);
+}
+*::-webkit-scrollbar-corner {
+  background-color: #fff;
 }
 *::selection {
-  background-color: rgb(0,85,0)!important;
+  background-color: rgb(0,85,0);
   color: #fff;
 }
 input:focus-within {
   outline: none;
 
 }
-/*main {
-  height: 100%;
-  width: 100;
-  background: {
-    image: url("./assets/img/services-bg.jpg");
-    repeat: no-repeat;
-    size: cover;
-    }
-    position: fixed;
-    overflow-y: auto;
-    top: 0;
+body {
+  text-align: center;
+  font-family: mont-reg!important;
+}
+Menu {
+  display: none;
+}
+#contextMenu {
+  display: none;
+  height: fit-content;
+  width: 200px;
+  position: absolute;
+  z-index: 100;
+  ul {
+    padding: 0;
+    border-radius: 5px;
+    background-color: $bg-white;
+    box-shadow: $box-shw;
+    backdrop-filter: blur(10px);
+  }
+  li {
     left: 0;
-    //text-align: center;
+    border-top: 1px solid rgba(0,0,0,.2);
+    font-size: 12px;
+    width: 100%!important;
+    height: 100%!important;
+    a {
+      text-align: left;
+      padding: 12px 15px;
+      text-decoration: none;
+      width: 100%!important;
+      height: inherit;
+      display: block;
+    }
+  }
+  li:first-child {
+    margin-top: 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+  }
+  li a:hover {
+    background-color: rgba(0,0,0,.2);
+  }
 }
-.Just-border {
-  width: 100%;
-  background-color: $bg_color;
-}
-section {
-  height: 100vh;
-  padding: 20px;
-  transition: linear(0.075, 0.82, 0.165, 1);
-
-}
-*/

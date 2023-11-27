@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.stshockcolor{fill:#616161;}
+	.st1{fill:none;}
+	.st2{opacity:0.4;fill:#FFFFFF;}
+]]>
+</style>
+<rect class="st1" width="24" height="24"/>
+<path id="shock_x5F_color" class="stshockcolor" d="M19,4v2h-1v13c0,1.1-0.9,2-2,2H8c-1.1,0-2-0.9-2-2V6H5V4h3.5l1-1h5l1,1H19z"/>
+<path class="st2" d="M18,8V6H6v13c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2h-2V8H18z M10,19H8V8h2V19z M14,19h-2V8h2V19z"/>
+</svg>

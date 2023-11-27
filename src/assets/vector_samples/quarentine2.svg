@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{opacity:0.2;fill:#FFFFFF;}
+	.st1{fill:none;}
+	.stshockcolor{fill:#D32F2F;}
+]]>
+</style>
+<rect class="st1" width="24" height="24"/>
+<path id="shock_x5F_color" class="stshockcolor" d="M18,9v6l-6,4l-6-4V9l6-4L18,9z M16,2v2h4v4h2V2H16z M16,22v-2h4v-4h2v6H16z M8,22v-2H4v-4  H2v6H8z M8,2v2H4v4H2V2H8z"/>
+<polygon class="st0" points="12,5 12,19 6,15 6,9 "/>
+</svg>

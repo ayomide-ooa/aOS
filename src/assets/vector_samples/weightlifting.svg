@@ -1,0 +1,13 @@
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.stshockcolor{fill:#6200EA;}
+	.st1{opacity:0.3;fill:#FFFFFF;}
+</style>
+<path id="shock_x5F_color" class="stshockcolor" d="M23,3h-1V1h-2v2H4V1H2v2H1v2h1v2h2V5h2c0,3.031,0.427,6.106,3,7.382v3.895
+	c0.295-0.172,0.634-0.283,1-0.278c1,0.016,1.578,0.516,1.79,1.221l1.253,4.069C13.049,21.31,13.313,22,14,22
+	c0.813,0,0.998-0.782,1-1v-4v-4.618c2.573-1.276,3-4.351,3-7.382h2v2h2V5h1V3z M12,11c-2.594,0-4-0.956-4-6h8
+	C16,10.044,14.594,11,12,11z M12,10c1.105,0,2-0.895,2-2c0-1.105-0.895-2-2-2s-2,0.895-2,2C10,9.105,10.895,10,12,10z M10,17
+	c-0.552,0-1,0.447-1,1v4h2v-4C11,17.447,10.552,17,10,17z"/>
+<path class="st1" d="M23,3v2h-1v2h-2V5h-2V3h2V1h2v2H23z M4,1H2v2H1v2h1v2h2V5h2V3H4V1z M8,5h8V3H8V5z"/>
+</svg>

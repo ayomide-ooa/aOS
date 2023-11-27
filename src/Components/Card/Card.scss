@@ -1,18 +1,29 @@
 @import '../../App.scss';
+@import '../../Functions/animation.scss';
+
+.Card-max {
+    width: 100vw!important;
+    height: 100vh!important;
+    top: 0!important;
+    left: 0!important;
+    transform: scale(0.5,0.5);
+}
 
 .Card {
-    background-color: #ddd;
+    background-color: rgba(255,255,255,.5);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 10vh;
     left: 20vw;
-    z-index: 2;
+    z-index: 9;
     border-radius: 10px;
-    overflow: hidden;
-    width: 50vw;
-    height: 70vh;
+    width: 55vw;
+    height: 80vh;
+    // display: none;
     box-shadow: $box-shw;
+    @include zoom-out;
     .card-header {
-        @include radial-gradient();
+        background-color: green;
         width: 100%;
         max-height: 100px;
         position: sticky;
@@ -21,23 +32,60 @@
         flex-grow: 1;
         justify-content: space-between;
         padding: 5px 10px;
+        cursor: move;
         font: {
             weight: 600;
             size: 1.5vw;
         }
-        .right span{
-            padding-left: 10px;
+        .right button{
+            // @include icons-box(1rem);
+            background-color: #33333357;
+            backdrop-filter: blur(20px);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 1px;
         }
-        .right span:hover {
-            filter: invert(0.3);
+        .right button:first-child:hover {
+            background-color: green;
+        }
+        .right button:nth-child(2):hover {
+            background-color: yellow;
+        }
+        .right button:nth-child(3):hover {
+            background-color: red;
         }
     }
 }
+    .card-body-head {
+        width: 100%;
+        height: 50px;
+        background-color: #ccc;
+        ul {
+            display: inline;
+            cursor: default;
+            li {
+                display: inline-block;
+                margin: 5px auto;
+                width: fit-content;
+                font: {
+                    size: 0.9rem;
+                    weight: 700;
+                }
+                    color: #333;
+                    padding: 10px;
+                    //border-left: 1px solid rgba(0,0,0,.2);
+            }
+            li:hover {
+                @include bg-hover;
+            }
+        }
+    }
     .card-content {
         padding: 10px;
         text-align: left;
         height: 1000px;
         overflow: visible;
+        //background-color: #ccc;
         .app-logo {
             //width: 10vw;
             height: 10vh;
@@ -45,3 +93,14 @@
             margin: 15px auto;
         }
     }
+    .folders {
+        justify-content: flex-start;
+        align-content: flex-start;
+         span {
+        // @include icons-box(3.5rem);
+        padding: 15px;
+         }
+         span:hover {
+        @include bg-hover;
+    }
+}

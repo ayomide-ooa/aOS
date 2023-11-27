@@ -1,22 +1,31 @@
 import React from 'react';
 import './App.scss';
-import Background from './Components/Background/Background'
-import Menu from './Components/Menu/Menu';
-import Card from './Components/Card/Card';
-import { AppData } from './Components/Data/AppData';
+import Background from './Components/Background'
+import Menu from './Components/Menu';
+import { hide, rightClick } from './Functions/Click';
+import Footer from './Components/Footer';
+import Desktop from './Components/Desktop';
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-    <Card 
-    appTitle={AppData.about_os.title} 
-    appLogo={AppData.about_os.logo}
-    appContent={AppData.about_os.content}/>
-    <Menu/>
-    <Background/>
+    <div className="App" onClickCapture={() => hide(document.getElementById("contextMenu"))}
+      onDoubleClick={() => hide(document.getElementById("Menu"))}
+      onContextMenu={ rightClick }>
+
+    <div id="contextMenu">
+    <ul>
+    <li><a href="refresh">Refresh</a></li>
+    <li><a href="group by">Group by</a></li>
+    <li><a href="view">View</a></li>
+    <li><a href="new">New</a></li>
+    <li><a href="setting">Setting</a></li>
+    </ul>
+    </div>
+
+      <Menu />
+      <Footer />
+      <Desktop />
+      <Background />
     </div>
   );
 }
-
-export default App;

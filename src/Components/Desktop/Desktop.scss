@@ -1,0 +1,41 @@
+@import "../../App.scss";
+@import "../Menu/Menu.scss";
+
+.Desktop {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    width: fit-content;
+    height: 100%;
+    padding: 3px 10px!important;
+
+.desktop-icon-wrapper {
+    position: fixed;
+    height: 95%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px!important;
+    column-gap: 15px!important;
+    overflow: visible;
+}
+.desktop-icon {
+    @include icons-box(6rem, 5.5rem);
+    transition: 0.5s ease-in;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    span {
+        display: block;
+        font-size: 0.9vw;
+        font-family: mont-med!important;
+    }
+    img {
+        height: 50px;
+    }
+}
+.desktop-icon:hover {
+    border: 1.5px solid #555;
+}
+}

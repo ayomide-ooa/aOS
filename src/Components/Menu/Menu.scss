@@ -1,63 +1,133 @@
 @import "../../App.scss";
+@import "../../Functions/animation.scss";
 
 .Menu {
-    position: absolute;
-    bottom: 8vh;
+    position: fixed;
+    bottom: 40px;
     left: 25vw;
     right: 25vw;
     margin: 5px auto;
-    width: 50vw;
-    height: 60vh;
-    border-radius: 10px;
-    border: 1.5px solid rgba(255,255,255,.4);
-    z-index: 1;
-    box-shadow: $box-shw;
-    overflow: hidden;
-    padding: 10px;
-}
-    .Menu img{
-        top: 0px;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        filter: blur(25px);
-        position: absolute;
-       // filter: -webkit-blur(30px);
-    }
-input.menu-search {
-    width: 100%;
-    position: sticky;
+    width: 40vw;
+    height: 70%;
     border-radius: 5px;
-    background-color: #ffffffaf;
-    font-size: 1vw;
-    padding: 10px;
     border: none;
     z-index: 1;
-    margin-top: 15px;
-    text-align: left;
-    font-family: logo-font;
+    box-shadow: $box-shw;
+    overflow: hidden!important;
+    padding: 10px;
+    display: none;
+    @include flyout();
+    transition: 1s linear;
+    background-color: $bg-white;
+    backdrop-filter: blur(30px);
+    font-family: mont-med!important;
+
+    .menu-search {
+        @include search-style(100%, 5px, #ffffff80, 1rem, 0);
+        display: flex;
+        flex-direction: row;
+        // justify-content: spac;
+        .search_icon {
+            height: fit-content;
+            width: fit-content;
+            padding: 10px 25px;
+            border: none;
+            background: transparent;
+        }
+        img {
+            margin-top: 10px auto!important;
+            height: 18px;
+        }
+        .search_icon:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+    input {
+        @include search-style(90vw, 0, transparent, inherit, 10px);
+        font-weight: 500;
+    }
 }
 .apps-grid {
     @include icon-wrapper;
     flex-flow: wrap;
     row-gap: 20px;
-    position: absolute;
+    position: relative;
     z-index: 1;
+    padding: 15px;
+    display: block;
+    overflow-y: auto;
+}
+.apps-grid:nth-child(2) {
+    height: calc(100% - 55%)!important;
+    max-height: 50%!important;
+}
+.apps-grid:nth-child(3) {
+    height: calc(100% - 70%)!important;
+}
+.apps-icon {
+    @include icons-box(5rem, 5rem);
+    text-overflow: ellipsis;
+    transition: 0.3s ease-in;
+    border-radius: 0;
+    span {
+        display: block;
+        font-size: 0.9vw;
+        font-family: mont-med!important;
+    }
+    img {
+        height: 35px;
+    }
+}
+.apps-icon:hover {
+    transform: scale(1.15, 1.15);
+}
 }
 .Menu::before{
     content: "All apps";
-    width: 90%;
-    color: #fff;
+    width: 100%;
+    color: #000;
     z-index: 1;
-    font-weight: 500;
+    font-weight: 700;
     position: relative;
-    border-bottom: 2px solid #fff;
+    display: block;
+    padding: 10px;
 }
-.apps-icon {
-    @include icons-box(10vh, 6vw, 3vw);
-    text-overflow: ellipsis;
-    span {
-        display: block;
-        font-size: 1.2vw;
+.MenuWidget {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+.apps-widget {
+    width: 49%;
+    border: 1.5px solid rgba(46, 79, 182, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    transition: 0.5s ease-in;
+    img {
+        min-width: 21%!important;
+        max-width: 21%!important;
+        height: fit-content;
+        margin: auto;
+
     }
+    p:first-child {
+        font-weight: 500;
+        font-size: 16px;
+        height: fit-content;
+    }
+    p {
+        text-align: left;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 95%;
+        height: 20px;
+        margin: 5px auto;
+        font-size: 12.3px;
+    }
+}
+.apps-widget:hover {
+    border: 1.5px solid rgba(46, 79, 182, 0.9);
+}
 }
